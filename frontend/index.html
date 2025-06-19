@@ -307,7 +307,7 @@
 
         // Função para buscar profissionais do backend
         async function fetchProfessionals() {
-            const res = await fetch('http://localhost:5000/api/cards');
+            const res = await fetch('https://deploy-marido-feriado-0vaa.onrender.com/api/cards');
             professionals = await res.json();
             renderCards(professionals);
         }
@@ -351,7 +351,7 @@
                 address: document.getElementById('address').value,
                 profession: document.getElementById('profession').value
             };
-            await fetch('http://localhost:5000/api/cards', {
+            await fetch('https://deploy-marido-feriado-0vaa.onrender.com/api/cards', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newProfessional)
